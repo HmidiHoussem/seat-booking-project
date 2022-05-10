@@ -1,0 +1,100 @@
+body{
+    background-color: black;
+    color: red;
+    text-align:center
+}
+.container {
+    position: relative;
+  }
+img{
+    width: 40%;
+}
+#image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+.text{
+    color:rgb(133, 174, 210);
+     font-weight: bold;
+      font-size: 20px;
+}
+#movies{
+    color: rgb(59, 13, 13);
+}
+.seat{
+    width: 40px;
+}
+
+
+/* seats design and concate with checkbox */
+
+ul {
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+
+  input[type="checkbox"][id^="row1_"] {
+    display: none;
+  }
+  input[type="checkbox"][id^="row2_"] {
+    display: none;
+  }
+  input[type="checkbox"][id^="row3_"] {
+    display: none;
+  }
+  input[type="checkbox"][id^="row4_"] {
+    display: none;
+  } 
+
+  label {
+    display: block;
+    position: relative;
+    margin: 0.5px;
+    cursor: pointer;
+  }
+  
+  label:before {
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 20px;
+    transform: scale(0);
+  }
+  
+  label img {
+    height: 50px;
+    width: 50px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+  }
+  
+  :checked + label {
+    border-color: #ddd;
+  }
+  
+  :checked + label:before {
+    content: "✓";
+    background-color: rgb(197, 123, 123);
+    transform: scale(1);
+  }
+  
+  :checked + label img {
+    transform: scale(0.9);
+    z-index: -1;
+  }
+  
